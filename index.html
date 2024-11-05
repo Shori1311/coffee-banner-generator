@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee generator</title>
+    <link rel="stylesheet" href="./main.css ">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <span class="logo"><span class="logo__highlight">Go</span>Software</span>
+            <span class="title">Coffee Banner Generator</span>
+        </header>
+
+        <main>
+            <div class="intro">
+                <h1>Welcome to the GoSoftware Banner Generator</h1>
+                <span class="subtitle">With this tool you are able to quickly craft your ideal coffee banner! Choose
+                    your blend and customize every detail for a a captivating brew display.</span>
+
+                <p>Simply complete the three easy steps below, and see your preview update as you go. Then
+                    view, copy and paste.</p>
+            </div>
+            <div class="container">
+                <div class="column left">
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>1. Select your coffee</h2>
+                        </div>
+
+                        <div class="card__body">
+                            <div class="coffee-type">
+                                <input type="radio" name="coffe-type" id="type-hot" value="hot" autocomplete="off"
+                                    checked>
+                                <label for="type-hot">Hot coffee</label>
+                                <br>
+                                <input type="radio" name="coffe-type" id="type-iced" value="iced" autocomplete="off">
+                                <label for="type-iced">Ice coffee</label>
+                            </div>
+
+                            <div class="coffee-variant">
+                                <select name="coffee-type" id="coffee-variant">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="card__action jc-flex-end">
+                            <button id="step_one" class="disabled" disabled="true">Next step</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>2. Choose your width</h2>
+                        </div>
+
+                        <div class="card__body">
+                            <div class="predefined-width">
+                                <div class="radio-column column-160">
+                                    <div>
+                                        <input type="radio" name="banner-width" id="banner-width-160" value="160"
+                                            autocomplete="off">
+                                        <label for="banner-width-160">160px</label>
+                                    </div>
+                                </div>
+                                <div class="radio-column column-300">
+                                    <div>
+                                        <input type="radio" name="banner-width" id="banner-width-300" value="300"
+                                            autocomplete="off">
+                                        <label for="banner-width-300">300px</label>
+                                    </div>
+                                </div>
+                                <div class="radio-column column-full">
+                                    <div>
+                                        <input type="radio" name="banner-width" id="banner-width-full" value="full"
+                                            autocomplete="off">
+                                        <label for="banner-width-full">100%</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="custom-width">
+                                <div>
+                                    <input type="radio" name="banner-width" id="banner-width-custom" value="custom"
+                                        autocomplete="off">
+                                    <label for="banner-width-custom">Custom</label>
+                                </div>
+
+                                <div class="custom-number-input">
+                                    <input type="number" name="banner-width-custom-number"
+                                        id="banner-width-custom-number" autocomplete="off">
+                                    <span>px</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card__action jc-flex-end">
+                            <button id="step_two" disabled="true">Next step</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>3. Customize title and description</h2>
+                        </div>
+
+                        <div class="card__body">
+                            <div class="banner-description margin-20">
+                                <label for="banner-title">Title:</label>
+                                <input type="text" name="banner-title" id="banner-title">
+                            </div>
+
+                            <div class="banner-description">
+                                <label for="banner-description">Description:</label>
+                                <input type="text" name="banner-description" id="banner-description">
+                            </div>
+                        </div>
+
+                        <div class="card__action jc-sp-between">
+                            <div>
+                                Start over
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+                            </div>
+
+                            <button><i class="fa-solid fa-code"></i> View and copy code</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column right">
+                    <div class="card">
+                        <div id="coffee-preview" class="card__body">
+                            <h3>Preview:</h3>
+                            <div id="preview"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/268d71140a.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
